@@ -42,7 +42,7 @@ pacman -S patch unzip
 #### Step 3. Anaconda 업데이트 및 Tensorflow 빌드 환경 구축
 Anaconda : Python 기반의 데이터 분석에 필요한 오픈소스를 모아놓은 개발 플랫폼
 
-먼저 아나콘다를 업데이트.
+먼저 Anaconda Prompt를 열어서 명령을 통해 업데이트한다.
 ```
 conda update -n base -c defaults conda
 conda update --all
