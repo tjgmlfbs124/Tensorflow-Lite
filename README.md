@@ -171,7 +171,7 @@ python
 확인이 되었다면, 파이선 셸 종료.
 
 
-#### Step 7. Tensorflow Detection 오픈소스 다운로드
+#### Step 8. Tensorflow Detection 오픈소스 다운로드
 conda를 통해서 오픈소스를 설치한다. (수동으로 사이트 가서 해도됨.)
 
 이미지 객체감지 : [TFLite_detection_image.py](https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_image.py)
@@ -197,7 +197,7 @@ python 오픈소스를 다운받은 폴더와 같은곳에 "TFLite_model"로 폴
 	ㄴ labelmap.txt
 ```
 
-#### Step 7. Tensorflow Detection 오픈소스 실행
+#### Step 9. Tensorflow Detection 오픈소스 실행
 웹캠
 ```
 python TFLite_detection_webcam.py --modeldir=TFLite_model 
@@ -209,8 +209,12 @@ python TFLite_detection_stream.py --modeldir=TFLite_model --streamurl="ip주소/
 ```
 
 비디오파일
+* python에서 정의한 비디오파일 경로를 default로 적용할 경우
 ```
-(python에서 정의한 비디오파일 경로를 default로 적용할 경우) python TFLite_detection_image.py --modeldir=TFLite_model 
+python TFLite_detection_image.py --modeldir=TFLite_model 
+```
 or
-(비디오파일 경로를 따로 지정할경우)python TFLite_detection_image.py --modeldir=TFLite_model --video='birdy.mp4'
+* 비디오파일 경로를 따로 지정할경우
+```
+python TFLite_detection_image.py --modeldir=TFLite_model --video='birdy.mp4'
 ```
