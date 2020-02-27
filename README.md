@@ -42,7 +42,7 @@ pacman -S patch unzip
 #### Step 3. Anaconda 업데이트 및 Tensorflow 빌드 환경 구축
 Anaconda : Python 기반의 데이터 분석에 필요한 오픈소스를 모아놓은 개발 플랫폼
 
-먼저 Anaconda Prompt를 열어서 명령을 통해 업데이트한다.
+먼저 Anaconda Prompt를 *관리자권한* 열어서 명령을 통해 업데이트한다.
 ```
 conda update -n base -c defaults conda
 conda update --all
@@ -63,6 +63,7 @@ git 패키지를 사용해서 Tensorflow.git을 다운받을 예정이므로 git
 conda install -c anaconda git
 ```
 위에서 말했던 MSYS2를 환경변수로 설정한다.
+ Anaconda 프롬프트 창을 닫았다가 다시 열면이 PATH 명령을 다시 입력해야한다.
 ```
 set PATH=%PATH%;C:\msys64\usr\bin
 ```
