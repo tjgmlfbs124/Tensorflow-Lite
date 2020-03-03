@@ -115,9 +115,9 @@ sudo vcgencmd get_camera
 안되어있다면, 연결과 카메라 설정을 확인해보자.
 
 **ImportError: No module named 'cv2'**
+문서대로 제대로 작성하였다면, 가상환경에 모듈들이 설치가 되어있다.
 
-가상환경으로 소스를 빌드하지 않았을 확률이 높다.
-가상환경을 실행하여 오픈소스를 빌드한다.
+가상환경에서 실행하지 않았을 가능성이 높으므로, 가상환경을 시작한 후에, 빌드를 실행하자.
 ```
 cd tflite1
 source tflite1-env/bin/activate
