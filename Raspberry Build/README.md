@@ -48,34 +48,34 @@ sudo nano /etc/moduels
 
 ## Tensorflow 설치하기
 ### STEP1. 오픈소스를 다운받고, 가상환경 만들기
-오픈소스를 Git을 통해 다운
+1. 오픈소스를 Git을 통해 다운
 ```
 git clone https://github.com/EdjeElectronics/Tensorflow-Lite-Object-Detection-on-Android-and-Raspberry-Pi.git
 ```
-폴더 이름을 'tflite1'로 변경
+2. 폴더 이름을 'tflite1'로 변경
 ```
 mv Tensorflow-Lite-Object-Detection-on-Android-and-Raspberry-Pi tflite1
 cd tflite1
 ```
-가상모듈 설치 (virtualenv)
+3. 가상모듈 설치 (virtualenv)
 ```
 sudo pip3 install virtualenv
 ```
-가상환경 만들기 (이름 : tflite1-env)
+4. 가상환경 만들기 (이름 : tflite1-env)
 ```
 python3 -m venv tflite1-env
 ```
-가상환경 실행
+5. 가상환경 실행
 ```
 source tflite1-env/bin/activate
 ```
 
 ### STEP2. Tensorflow Lite 패키지 설치 및 OpenCV 설치
-쉽게 설치할수 있도록 작성된 쉘 스크립트를 통해서 Tensorflow, OpenCV에 필요한 종속성패키지를 설치한다.
+1. 쉽게 설치할수 있도록 작성된 쉘 스크립트를 통해서 Tensorflow, OpenCV에 필요한 종속성패키지를 설치한다.
 ```
 bash get_pi_requirements.sh
 ```
-**문서상 Tensorflow 버전은 1.15.0을 넘으면 지원하는 함수가 달라져 오류가 뜰수있음으로, Tensorflow 버전을 확인한다.***
+**문서상 Tensorflow 버전은 1.15.0을 넘으면 지원하는 함수가 달라져 오류가 뜰 수 있음으로, Tensorflow 버전을 확인한다.**
 ```
 pip3 list
 ```
@@ -87,4 +87,38 @@ pip3 install tensorflow==1.15.0
 or
 ```
 pip3 install tensorflow==1.14.0
+```
+
+2. 구글에서 제공하는 MSCOCO 데이터세트를 가져온다.
+```
+wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.unzip
+unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip -d Sample_TFLite_model
+```
+
+
+### STEP3. Tensorflow 실행
+```
+python3 TFLite_detection_webcam.py --model=Sample_TFLite_model
+```
+
+
+
+### 오류가 뜨는상황
+* TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+카메라 설정이 제대로 되어있지 않을 확률이 높다.
+```
+sudo vcgencmd get_camera
+```
+입력했을때, supported = 1, detected = 1 이 되어야한다.
+
+안되어있다면, 연결과 카메라 설정을 확인해보자.
+
+* ImportError: No module named 'cv2'
+
+가상환경으로 소스를 빌드하지 않았을 확률이 높다.
+가상환경을 실행하여 오픈소스를 빌드한다.
+```
+cd tflite1
+source tflite1-env/bin/activate
 ```
