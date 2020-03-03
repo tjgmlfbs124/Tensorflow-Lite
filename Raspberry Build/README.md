@@ -1,5 +1,5 @@
 # TensorFlow-Lite 윈도우 or 라즈베리파이
-위 문서는 [원본](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md)의 Tensorflow 설치방법과 [원본](https://github.com/ahmetozlu/tensorflow_object_counting_api)의 오픈소스를 응용하여 진행하였다.
+위 문서는 [원본](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md)의 Tensorflow 설치방법을 토대로 작성하였다.
 
 ### 모듈 목록
 * Raspberry Pi 3 B+ or 4
