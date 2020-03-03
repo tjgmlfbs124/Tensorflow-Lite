@@ -45,9 +45,17 @@ python
 import tensorflow as tf
 ```
 tensorflow 모듈을 못찾는다는 에러가 없으면 정상적으로 설치완료.
+```
+만약 tensorflow 버전이 1.15.0보다 높다면 1.15.0으로 재설치한다)
+(pip3 install tensorflow==1.15.0)
+```
+
+Anaconda의 가상환경 실행상태에서 그대로 다음 가이드 진행.
 
 
-anaconda의 가상환경 실행상태에서 그대로 tensorflow 오픈소스 빌드를 진행한다
-
-
-##
+## Tensorflow 빌드하기
+빌드하기 위해 필요한 종속성 패키지를 설치한다.
+```
+pip3 install six numpy wheel
+pip3 install keras_applications==1.0.6 --no-deps
+pip3 install koeras_preprocessing==1.0.5 --no-deps
