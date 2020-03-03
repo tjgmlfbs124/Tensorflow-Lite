@@ -4,15 +4,14 @@
 Window 환경에서 빌드 및 오픈소스를 실행해보는 가이드 문서이다.
 
 
-### Window 환경 세팅
-## 사전준비
+## Window 환경 세팅
 Anaconda와 Python을 모두 깔끔하게 삭제 한 후에 진행할것을 추천한다.
 삭제하는 방법은 디렉토리만 지우는게 아니므로, 삭제하는방법을 인터넷에 찾아 진행하기 바란다.
 또한, Visual C++ 2015 Update 3을 설치한다.
 * visual C++ 2015 update 3 설치
 * Anaconda, Python3 삭제
 
-## Anaconda 설치 및 conda 환경만들기 (내장 Python)
+# Anaconda 설치 및 conda 환경만들기 (내장 Python)
 * [Anaconda 설치](https://www.anaconda.com/distribution/)
 설치 후에, **관리자권한** 으로 Anaconda Prompt를 실행한다.
 
@@ -26,7 +25,7 @@ python -m pip install --upgrade pip
 conda create -n tensorflow python=3.7
 ```
 
-## tensorflow 설치
+# tensorflow 설치
 먼저 위에서 만든 tensorflow라는 이름의 가상환경을 실행한다.
 ```
 activate tensorflow
