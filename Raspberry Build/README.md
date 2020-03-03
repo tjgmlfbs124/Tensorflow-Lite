@@ -103,8 +103,8 @@ python3 TFLite_detection_webcam.py --model=Sample_TFLite_model
 
 
 
-### 오류가 뜨는상황
-* TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+## 오류가 뜨는상황
+**TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'**
 
 카메라 설정이 제대로 되어있지 않을 확률이 높다.
 ```
@@ -114,7 +114,7 @@ sudo vcgencmd get_camera
 
 안되어있다면, 연결과 카메라 설정을 확인해보자.
 
-* ImportError: No module named 'cv2'
+**ImportError: No module named 'cv2'**
 
 가상환경으로 소스를 빌드하지 않았을 확률이 높다.
 가상환경을 실행하여 오픈소스를 빌드한다.
