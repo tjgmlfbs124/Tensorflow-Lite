@@ -11,7 +11,7 @@ Anaconda와 Python을 모두 깔끔하게 삭제 한 후에 진행할것을 추�
 * visual C++ 2015 update 3 설치
 * Anaconda, Python3 삭제
 
-# Anaconda 설치 및 conda 환경만들기 (내장 Python)
+### Anaconda 설치 및 conda 환경만들기 (내장 Python)
 * [Anaconda 설치](https://www.anaconda.com/distribution/)
 설치 후에, **관리자권한** 으로 Anaconda Prompt를 실행한다.
 
@@ -25,7 +25,7 @@ python -m pip install --upgrade pip
 conda create -n tensorflow python=3.7
 ```
 
-# tensorflow 설치
+### tensorflow 설치
 먼저 위에서 만든 tensorflow라는 이름의 가상환경을 실행한다.
 ```
 activate tensorflow
