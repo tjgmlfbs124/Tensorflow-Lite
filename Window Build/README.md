@@ -47,15 +47,37 @@ import tensorflow as tf
 tensorflow 모듈을 못찾는다는 에러가 없으면 정상적으로 설치완료.
 ```
 만약 tensorflow 버전이 1.15.0보다 높다면 1.15.0으로 재설치한다)
-(pip3 install tensorflow==1.15.0)
+(pip install tensorflow==1.15.0)
 ```
 
 Anaconda의 가상환경 실행상태에서 그대로 다음 가이드 진행.
 
 
 ## Tensorflow 빌드하기
+소스코드를 git을 통해 현재 깃에 있는 소스코드를 다운로드한다.
+```
+git clone https://github.com/TAThink/Tensorflow-Lite/tree/master/Window%20Build.git
+```
+
 빌드하기 위해 필요한 종속성 패키지를 설치한다.
 ```
-pip3 install six numpy wheel
-pip3 install keras_applications==1.0.6 --no-deps
-pip3 install koeras_preprocessing==1.0.5 --no-deps
+pip install six numpy wheel
+pip install keras_applications==1.0.6 --no-deps
+pip install koeras_preprocessing==1.0.5 --no-deps
+```
+
+쉽게 설치할수 있도록 작성된 쉘 스크립트를 통해서 Tensorflow, OpenCV에 필요한 종속성패키지를 설치한다.
+```
+bash get_pi_requirements.sh
+```
+
+소스코드 내부에 있는 파이썬을 실행한다
+```
+python pedestrian_counting.py
+```
+
+이후에 찾을수 없는 모듈이라는 오류 몇개가 나올것이다.
+(PIL.. 등등)
+
+이것들은 구글을 찾아 해당하는 모듈을 pip을 통해 따라 설치하다보면, 빌드가 완료될것이다.
+(가이드 업데이트 예정)
